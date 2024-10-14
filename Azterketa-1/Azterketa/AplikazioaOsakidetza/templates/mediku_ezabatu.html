@@ -1,0 +1,27 @@
+<html>
+  <body>
+    {% extends 'base.html' %}
+    {% block content %}
+      <h1>Medikua ezabatu</h1>
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>Izena</th>
+            <th>Abizena</th>
+            <th>Jaiotze Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for mediku in medikuak %}
+          <tr>
+            <td>{{ mediku.izena }}</td>
+            <td>{{ mediku.abizena }}</td>
+            <td>{{ mediku.jaiotze_data }}</td>
+            <td><a href="{% url 'zerrenda-mediku-ezabatu' mediku.id %}" class="btn btn-default">Ezabatu</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endblock %}
+  </body>
+</html>

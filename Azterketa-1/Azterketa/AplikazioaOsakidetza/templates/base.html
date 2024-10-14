@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Osakidetzako Aplikazio Berria</title>
+    <link href="https://fonts.googleapis.com/css?family=Ruslan+Display" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstraptheme.min.css" />
+</head>
+
+<body>
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">{% block content %} {% endblock %}</div>
+        </div>
+    </div>
+    <a href="/">Medikuen zerrenda ikusi</a>
+    <br><br>
+    <a href="{% url 'zerrenda-mediku-new' %}"><span class="glyphicon glyphicon-plus">Mediku berria
+            gehitu</span></a><br><br>
+    <a href="{% url 'medikua-ezabatu' %}"><span class="glyphicon glyphicon-plus">Medikua ezabatu</span></a><br><br>
+    <a href="{% url 'zerrenda-medikuak' %}"><span class="glyphicon glyphicon-plus">Medikua aldatu</span></a><br><br>
+    <a href="{% url 'zerrenda-pazienteak-ikusi' %}"><span class="glyphicon glyphicon-plus">Pazienteen zerrenda
+            ikusi</span></a><br> <br>
+    <a href="{% url 'zerrenda-paziente-new' %}"><span class="glyphicon glyphicon-plus">Paziente berria gehitu</span></a>
+    <br><br>
+    <a href="{% url 'paziente-ezabatu' %}"><span class="glyphicon glyphicon-plus">Pazientea ezabatu</span></a><br><br>
+    <a href="{% url 'zerrenda-pazienteak' %}"><span class="glyphicon glyphicon-plus">Pazientea aldatu</span></a><br><br>
+    <a href="{% url 'zita-new' %}"><span class="glyphicon glyphicon-plus">Zita Sortu</span></a><br>
+</body>
+
+</html>
